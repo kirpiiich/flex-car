@@ -1,2 +1,2 @@
-# carsharing-service
+# flex-car
 Course project
