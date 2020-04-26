@@ -27,6 +27,16 @@ h2 {
   text-transform: capitalize;
 }
 
+p {
+  margin: 0;
+  font-family: Open Sans;
+  font-size: 1.25em;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #56576B;
+}
+
 a {
   text-decoration: none;
 }
@@ -41,14 +51,11 @@ a {
   user-select: none;
 }
 
-.screen-page {
-  
-}
-
 /* Header stylization */
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-flow: column;
   align-items: stretch;
@@ -154,14 +161,13 @@ header {
 footer {
   display: flex;
   flex-flow: column;
-  
   background: #56576B;
 }
 
 .upper-footer {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .item-wrapper {
