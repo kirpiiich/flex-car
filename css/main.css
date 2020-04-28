@@ -3,36 +3,35 @@
 main {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-section {
-  display: flex;
-  flex-flow: column;
+  justify-content: flex-start;
   align-items: stretch;
 }
 
 .section-heading {
   text-align: center;
+  color: #00367B;
 }
 
 /* Stage stylization */
 
 .stage {
   height: 100vh;
+  position: relative;
+  top: -13vh;
+  z-index: -10;
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background: url(../img/stage-img.jpg) no-repeat center/cover;
   color: #fff;
   text-transform: capitalize;
 }
 
-.overlay {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.2);
+h1 {
+  position: relative;
+  top: -15%;
+  margin: 0;
 }
 
 /* Benefits section stylization */
@@ -41,6 +40,7 @@ section {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   color: #00367B;
 }
 
@@ -54,14 +54,16 @@ section {
   width: 50%;
   background: #fff;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  padding: 1%;
 }
 
 .benefit {
   display: flex;
   flex-flow: row;
   align-items: center;
+  align-self: stretch;
   justify-content: space-around;
-  margin: 5%;
+  margin: 2%;
 }
 
 .benefit-text {
@@ -74,20 +76,90 @@ section {
 }
 
 .benefit-image {
-  height: 200px;
-  width: 200px;
+  height: 196px;
+  width: 196px;
   box-shadow: 0px 0px 8px rgba(0, 54, 123, 0.5);
-  border-radius: 150px;
+  border-radius: 100px;
 }
 
-.benefit-image.smart {
-  background: url(../img/1-benefit-img.jpeg) no-repeat center/cover;
+.benefit-image.smart {background: url(../img/1-benefit-img.jpeg) no-repeat center/cover;}
+
+.benefit-image.cheap {background: url(../img/2-benefit-img.jpg) no-repeat center/cover;}
+
+.benefit-image.easy {background: url(../img/3-benefit-img.jpeg) no-repeat center/cover;}
+
+/* Slideshow section stylization */
+
+.slideshow {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 0;
+  height: 92vh;
 }
 
-.benefit-image.cheap {
-  background: url(../img/2-benefit-img.jpg) no-repeat center/cover;
+.slideshow-container {
+  width: 100%;
+	height: 85%;
+	margin: 1% 0;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.benefit-image.easy {
-  background: url(../img/3-benefit-img.jpeg) no-repeat center/cover;
+.slideshow-container:hover {
+  animation-play-state: paused;
 }
+
+.slide {
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  z-index: -1;
+	top: 0;
+  left: 0;
+  animation: slide 24s linear infinite;
+}
+
+.slide1 { 
+  background: url(../img/nissan-leaf-2.jpg) no-repeat center/cover;
+  animation-delay: 18s;
+ }
+ .slide2 { 
+  background: url(../img/renault-captur-2020.jpg) no-repeat center/cover;
+  animation-delay: 12s;
+ }
+ .slide3 { 
+  background: url(../img/nissan-leaf-1.jpg) no-repeat center/cover;
+  animation-delay: 6s;
+ }
+ .slide4 { 
+  background: url(../img/chevrolet-bolt.jpg) no-repeat center/cover;
+  animation-delay: 0s;
+ }
+
+ @keyframes slide {
+  from {
+   top: 0;
+   left: 0;
+  }
+  12.5% {
+   transform: translate(0, 0);
+  }
+  25% {
+   transform: translate(-100%, 0);
+  }
+  36% {
+   transform: translate(-100%, 100%);
+  }
+  37% {
+   transform: translate(100%, 100%);
+  }
+  87.5% {
+   transform: translate(100%, 0);
+  }
+  to {
+   transform: (0, 0);
+  }
+ }
