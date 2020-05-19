@@ -1,0 +1,78 @@
+body {
+  background: #E9EBED;
+}
+
+header {
+  color: #00367B;
+}
+
+.bottom {
+  background: #CFDFE8;
+}
+
+.bottom .header-link {
+  color: #00367B;
+}
+
+.bottom>.left>.logo-wrapper {
+  color: #00367B;
+}
+
+.bottom>.left .logo {
+  background: #00367B;
+}
+
+main {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+label {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+fieldset {
+  margin: 10px 0;
+  border: 2px solid #00367b;
+  border-radius: 10px;
+}
+
+legend {
+  color: #00367B;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(0, 54, 123, 0.25);
+  padding: 4px 8px;
+  background: #E9EBED;
+  outline: none;
+  font: 300 14px 'Montserrat';
+}
+
+input:focus {
+  border-bottom: 2px solid #00367b;
+}
+
+
+
+button {
+  width: 144px;
+  align-self: center;
+  margin-top: 10px;
+}
