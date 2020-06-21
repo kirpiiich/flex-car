@@ -1,0 +1,59 @@
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+section {
+  margin: 0.5em 0;
+  width: 50%;
+}
+
+h2 {
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.history-pic {
+  height: 20vh;
+  box-shadow: 0px 0px 8px rgba(86, 87, 107, 0.5);
+}
+
+.pic-1 {
+  background: url(../img/history-pic-1.jpg) no-repeat center/cover;
+}
+
+.pic-2 {
+  background: url(../img/history-pic-2.jpg) no-repeat center/cover;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row>* {
+  width: 30%;
+}
+
+.name {
+  color: black;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .row>* {
+    width: 100%;
+  }
+}

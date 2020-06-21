@@ -132,14 +132,6 @@ header {
   font-weight: bold;
 }
 
-.bottom>.left .logo {
-  height: 2.5em;
-  width: 2.5em;
-  margin: 4px;
-  border-radius: 4px;
-  background: #CFDFE8;
-}
-
 .bottom>.right {
   justify-content: space-between;
   width: 40%;
